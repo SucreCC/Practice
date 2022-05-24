@@ -13,6 +13,7 @@ This program will read the query data from query.txt (src/main/resources/query.t
 ![timeDIagram](/Users/dengkai/workspace/coding/src/main/resources/timeDIagram.jpg)
 
 
+![3 配置通道](https://user-images.githubusercontent.com/79621538/170102313-a007cb8f-8c81-48a6-b18e-092ffc24ef19.jpg)
 
 
 
