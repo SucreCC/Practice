@@ -21,5 +21,5 @@ This part is a simple test about the program.
 
 Firstly you can use method writeQueryToFile() to define how many query you want to send.
 
-Secondly you can use method sendTest() to send query, you can also set how many thread you want to use by change the threadNumber.
+Secondly you can use method sendTest() to send query, you can also set how many thread you want to use by change the parameter named threadNumber.
 
