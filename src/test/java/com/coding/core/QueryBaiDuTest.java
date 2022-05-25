@@ -32,7 +32,7 @@ public class QueryBaiDuTest {
     @Test
     public void writeQueryToFile() throws IOException {
         StringBuilder queryContent = new StringBuilder();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             queryContent.append(i).append(",");
         }
         String filePath = "src/main/resources/query.txt";

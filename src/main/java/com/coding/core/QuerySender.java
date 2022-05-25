@@ -24,14 +24,17 @@ public class QuerySender {
         List<Runnable> runnableList = new ArrayList<>();
         for (int i = 0; i < number; i++) {
             Runnable runnable = () -> {
-                synchronized (queryQueue){
-                    while (!queryQueue.isEmpty()) {
-                        String query = queryQueue.poll();
-                        ResponseEntity<String> response = I_HTTP_CLIENT.doGet(query);
-                        QueryResponse queryResponse = new QueryResponse()
-                            .setQuery(query)
-                            .setResponse(response);
-                        queryResponses.add(queryResponse);
+                while (!queryQueue.isEmpty()) {
+                    synchronized (queryQueue) {
+                        if(!queryQueue.isEmpty()){
+                            String query = queryQueue.poll();
+                            System.out.println(Thread.currentThread().getName() + " <- total response -> " + queryResponses.size());
+                            ResponseEntity<String> response = I_HTTP_CLIENT.doGet(query);
+                            QueryResponse queryResponse = new QueryResponse()
+                                .setQuery(query)
+                                .setResponse(response);
+                            queryResponses.add(queryResponse);
+                        }
                     }
                 }
             };
