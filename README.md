@@ -8,7 +8,7 @@ This program have two part, first is a program to send request, second is a unit
 
 ## The First Part
 
-This program will read the query data from query.txt (src/main/resources/query.txt) and build it to http request than use multi-thread send request to Baidu then generate summarize and print it to console.
+This program will read the query data from query.txt (src/main/resources/query.txt), next build qurey to http request, then use multi-thread send request to Baidu,finally generate summarize and print it to console.
 
 
 ![3 配置通道 ](https://user-images.githubusercontent.com/79621538/170102833-299d8679-f8f9-452f-8e4a-51b09a5056c5.jpg)
